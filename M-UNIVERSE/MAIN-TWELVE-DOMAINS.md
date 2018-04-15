@@ -3,8 +3,8 @@
 The Twelve Domains of the Game:
 
 Separate from the main realm:
-- [KU] The Room (maybe change this to a Castle?)
-- [TR] The Tunnel
+- [KU] The Castle (Kindergarten to University)
+- [TR] The Tunnel (Transition to abstract math)
 
 Underground (vertical level 1):
 - [FO] The Dark Halls of Foundations
@@ -23,8 +23,8 @@ In outer space (vertical level 4):
 - [PH] The Vast Expanse of Physics
 
 Not yet positioned, but probably on ground level:
-- [ME] The Temples (five temples for the Educators, the Historians, the Linguists, the Philosophers, and the Librarians)
-- [CO] Combinatorics (Island? Caves???)
+- [ME] The Temples of Sages (five temples for the Educators, the Historians, the Linguists, the Philosophers, and the Librarians)
+- [CO] The Island of Combinatorics
 
 Story:
 
@@ -54,4 +54,4 @@ Island of Combinatorics.
 
 Temples of Sages.
 
-We could also add the Jungle as a 13th domain, where the jungle would symbolize all the mathematics yet to be discovered. 
+We could also add the Jungle as a 13th domain, where the jungle would symbolize all the mathematics yet to be discovered.
