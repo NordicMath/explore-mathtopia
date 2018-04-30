@@ -20,6 +20,8 @@ http://theoreticalminimum.com/courses
 Another good page is the guideline page of t'Hooft:
 http://www.staff.science.uu.nl/~gadda001/goodtheorist/index.html
 
+Basic intro:
+http://front.math.ucdavis.edu/1803.07098
 
 ## Various books and links (not so organised)
 
@@ -44,13 +46,23 @@ Nakahara!
 
 More books in Finder?
 
+The Frontiers volumes:
+https://www.springer.com/gp/book/9783540231899
+https://www.springer.com/gp/book/9783540303077
+
 Books by Zee.
+
+QFT for the gifted amateur.
 
 Schottenloher: A mathematical introduction to conformal field theory
 
+### People
+
+Mathematicians who have som interest in physics include:
+Kontsevich, Marcolli, Connes, ...
+
 
 ### Relations between physics and number theory
-
 
 [An MO question](https://mathoverflow.net/questions/224263/number-theory-and-physics)
 

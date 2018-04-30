@@ -1,7 +1,7 @@
 # Development philosophy
 
 
-
+Todo: Read Zalamea and extract practical advice for students.
 
 ### Scattered notes
 

@@ -52,6 +52,6 @@ Above the river, the Bridges of Cohomology.
 
 Island of Combinatorics.
 
-Temples of Sages.
+Temples of Sages (where metamathematics lives)
 
 We could also add the Jungle as a 13th domain, where the jungle would symbolize all the mathematics yet to be discovered.

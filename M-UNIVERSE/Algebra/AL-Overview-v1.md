@@ -3,7 +3,7 @@
 
 In the air:
 - The quantum colony
-- The Arenas
+- The Arenas (where algebras and modules train)
 
 On ground, from south to north.
 - Fundamental number systems (sea)
