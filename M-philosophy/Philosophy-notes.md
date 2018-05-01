@@ -1,6 +1,9 @@
 # Development philosophy
 
 
+Spell out the Zophie philosophy of types and machines.
+
+
 Todo: Read Zalamea and extract practical advice for students.
 
 ### Scattered notes
