@@ -1,4 +1,4 @@
-# Rough classification of MSC subareas
+# Rough Kan classification of MSC subareas
 
 https://zbmath.org/classification/
 
