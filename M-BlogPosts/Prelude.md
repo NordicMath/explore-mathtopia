@@ -58,7 +58,7 @@ From the Wikipedia page on Ramanujan: "He received a scholarship to study at Gov
 
 ## The Legend of Kan
 
-The human mind is designed for survival and reproduction, and this means that we have an intuitive understanding of things like food, violence, death, colours, sounds, physical movement, social relations, and exploration of unknown territory. On the other hand, we are not designed to parse long strings containing lots of logical quantifiers or to remember arbitrary sign conventions. Successful computer games and fantasy literature tend to exploit these design features of the human mind. Think of Minecraft, World of Warcraft, or Tolkien's Middle-earth.
+The human mind is designed for survival and reproduction, and this means that we have an intuitive understanding of things like food, violence, death, colours, sounds, stories, anthropomorphism, time, physical movement, social relations, emotions, music, and exploration of unknown territory. On the other hand, we are not designed to parse long strings containing lots of logical quantifiers or to remember arbitrary sign conventions. Successful computer games and fantasy literature tend to exploit these design features of the human mind. Think of Minecraft, World of Warcraft, or Tolkien's Middle-earth.
 
 The project I would like to introduce with this note is called "The Legend of Kan" (from the quote "Every concept is a Kan extension"). It is a world in which the inhabitants of the mathematical universe come alive. Maybe a visit to the Realm of Kan will help you find your own path, so that you, or your students after you, one day can find the geometries that our generation could not reach.
 
