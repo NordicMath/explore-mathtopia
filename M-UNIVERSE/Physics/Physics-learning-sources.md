@@ -25,6 +25,9 @@ http://front.math.ucdavis.edu/1803.07098
 
 ## Various books and links (not so organised)
 
+John Baez (This week's finds and much more)
+http://math.ucr.edu/home/baez/TWF.html
+
 Lectures on QFT (Borcherds and Barnard)
 https://arxiv.org/abs/math-ph/0204014
 
