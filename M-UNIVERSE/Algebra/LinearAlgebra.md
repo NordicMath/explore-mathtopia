@@ -3,6 +3,10 @@
 
 ## References
 
+
+A top reference is the GTM volume by Roman (3rd edition).
+
+A list of references:
 https://begriffs.com/posts/2016-07-24-best-linear-algebra-books.html
 
 

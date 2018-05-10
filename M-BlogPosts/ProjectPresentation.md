@@ -1,5 +1,7 @@
 # Introducing the Legend of Kan project
 
+Todo: Reference MacLane and Riehl.
+
 What is the structure of mathematics? Can we study mathematics as a whole? If I know enough mathematics to know that I want to be a mathematician, how do I get an overview of the entire body of mathematics so that I can get a feeling for what's important and choose where to focus my efforts?
 
 Can we teach students to think of mathematics as a single entity, rather than as a selection of isolated topics? When learning geography, most kids will have access to a globe, giving them a feeling for Earth as a whole, continents, countries, cities etc. Before globes were widely available, they might have been exposed exclusively to the geography of their own home town and its immediate surroundings, and some very important perspectives would be missing in their education. But this is exactly what we tend to do with our students of mathematics, exposing them to only to calculus and a few selected topics in the "immediate surroundings" of calculus (like linear algebra, complex analysis, and Galois theory).
@@ -46,27 +48,32 @@ Obviously, using "cohomology" as the only keyword is too blunt a filter, but wit
 
 ## The Zophie paradigm
 
-Mathematics is built on a language (group, R-module, manifold, etc etc). The standard paradigm for students learning mathematics is "semantics first", i.e. they are first given the definition of a concept, after which they (slowly!) build up their language around this concept, learning (1) which sentences are admissible and which ones are non-admissible, and (2) which of the admissible sentences are true, and finally (3) why these sentences are true. Roughly, point (1) corresponds to auxiliary definitions, point (2) to theorems, and point (3) to proofs.
+Mathematics is built on a language (group, R-module, manifold, Sym^k(V), etc etc). The standard paradigm for students learning mathematics is "semantics first", i.e. they are first given the definition of a concept, after which they (slowly!) build up their language around this concept, learning (1) which sentences are admissible and which ones are non-admissible, and (2) which of the admissible sentences are true, and finally (3) why these sentences are true. Roughly, point (1) corresponds to auxiliary definitions, point (2) to theorems, and point (3) to proofs.
 
 Toddlers learning to speak build their skills in a completely different way. Allowing some simplification, we can describe this learning paradigm as "syntax first". They learn that "one, two, three" is an admissible sentence long before they have any semantic understanding of "three". They also tend to learn by incessantly throwing out more or less random sentences, and picking up (from the reaction of people around them) which ones are admissible, and which ones are true (if by "true" we mean the sentences that help them survive).
 
 The toddler paradigm is unbelievably efficient. The Zophie paradigm is an attempt to formalize and develop a similar mode of learning for students of mathematics, mimicking the toddler's approach to language appropriation.
 
-In order to support actual learning under the Zophie paradigm, we as teachers must also take a very unfamiliar approach to feedback. A toddler who says "pillow sleep" as his or her first two-word sentence is amply rewarded with *positive* feedback, even though the sentence is not grammatically correct. A student on the other hand, who formulates a grammatically incorrect sentence, is usually punished, which means we discourage the all-important process of incessant random sentence formation. Ok, maybe "incessant random sentence formation" is not literally what we are after, but the point is that we should *encourage* student to think (and speak!!) about morphisms of schemes long before they master the formal definition of a scheme.
+In order to support actual learning under the Zophie paradigm, we as teachers must also take a very unfamiliar approach to feedback. A toddler who says "pillow sleep" as his or her first two-word sentence is amply rewarded with *positive* feedback, even though the sentence is not grammatically correct. A student on the other hand, who formulates a grammatically incorrect sentence (like "Let G be a finite-dimensional R-module."), is often punished, which means we discourage the all-important process of incessant random sentence formation. Ok, maybe "incessant random sentence formation" is not literally what we are after, but the point is that we should *encourage* student to think (and speak!!) about morphisms of schemes long before they master the formal definition of a scheme.
 
-The analogy between a student of mathematics and a toddler is not perfect, but I strongly believe there is something very important at the core of this analogy. Much work is needed though in trying out the Zophie paradigm in actual teaching settings, and maybe in developing a didactical theory supporting it.
+The analogy between a student of mathematics and a toddler is not perfect, but I strongly believe there it carries something very important at its core. Much work is needed though in trying out the Zophie paradigm in real-life teaching settings, and maybe also developing a didactical theory supporting it.
 
 
 ## Other related projects of ours
 
 Todo: Say more about
 
-- Nordic Math
-- The semantic database project
+- NordicMath research projects
+- NordicMath teaching experiments
+- The semantic database project with Erlangen people
 - The formal Zophie project
+- The NordicMath Library project
+
+Explain how they are all connected.
+
 
 ## Further notes
 
-Todo: Mention here some sources of inspiration, and related projects. Dieudonné, Princeton companion, Rusin atlas, various encyclopedias?
+Todo: Mention here some other sources of inspiration, and related projects. Dieudonné, Princeton companion, Rusin atlas, various encyclopedias, Vygotsky?
 
-In the philosophy of mathematics, there is important work of Albert Lautman and more recently David Corfield and Fernando Zalamea, emphasizing that philosophers should analyze "real mathematics" rather than the tiny fragments of logic and set theory usually considered. Maybe some of the work developed in the Legend of Kan project could (eventually!) be relevant in such attempts.
+In the philosophy of mathematics, there is important work of Albert Lautman and more recently David Corfield and Fernando Zalamea, emphasizing that philosophers should analyze "real mathematics" rather than the tiny fragments of logic and set theory too often considered. Maybe some of the work developed in the Legend of Kan project could (eventually!) be relevant in such attempts.

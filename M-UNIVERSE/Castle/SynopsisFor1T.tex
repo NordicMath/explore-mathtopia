@@ -1,0 +1,281 @@
+\documentclass[12pt]{amsart}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-2.5cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{15pt}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[colorlinks = true, linkcolor = black, citecolor = black, final]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{ marvosym }
+\usepackage{wasysym}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\newcommand{\ds}{\displaystyle}
+
+\setlength{\parindent}{0in}
+
+%\pagestyle{empty}
+
+% ----------------------------
+
+% The "stuff" above here is called the preamble of the document.  It sets the margins and loads special packages.  Probably the only reason you would need to edit something above here would be to add a package to do something very specific... but probably everything you need is loaded already
+
+% -----------------------------
+
+\pagenumbering{arabic}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+{\scshape Matematikk} \hfill {\scshape \large Synopsis} \hfill {\scshape \copyright NordicMath 2018}
+
+\smallskip
+
+\hrule
+
+\vskip5pt
+
+We give a systematic overview of Norwegian school mathematics, in the so-called Zophie paradigm.
+\vskip10pt
+The exposition is adapted to a typical Norwegian student starting secondary school (videreg{\aa}ende) who is interested in mathematics, and is meant to be used as support for mathematical conversations between students and teacher.
+
+\section{Mathematical language}
+
+In these notes, we will encounter certain mathematical keywords that are fundamental to understanding the structure of mathematics.
+\vskip10pt
+Here's an informal introduction to each of these words. Their meaning will become much clearer after a while when you have seen them used in different situations!
+\vskip10pt
+{\bf Object}: Anything we can speak about. dd
+\vskip10pt
+{\bf Type}: A word that describes a particular kind of object.
+\vskip10pt
+{\bf Set}: A collection of objects.
+\vskip10pt
+{\bf List}: An ordered collection of objects.
+\vskip10pt
+{\bf Representation}: A way to describe an object.
+\vskip10pt
+{\bf Notation}: An explanation of some symbol.
+\vskip15pt
+We also have the so-called four fundamental machine types:
+\vskip5pt
+{\bf Property}: A machine taking one input object and giving a truth value.
+\vskip10pt
+{\bf Relation}: A machine taking two input objects and giving a truth value.
+\vskip10pt
+{\bf Function}: A machine taking one input object and giving one output object.
+\vskip10pt
+{\bf Operation}: A machine taking two input objects and giving one output object.
+\vskip20pt
+
+
+
+
+\newpage
+\section{Integers}
+
+Type: Integer (Norsk: Heltall)
+
+\bigskip
+Examples:
+\smallskip
+\begin{itemize}
+  \item 42
+  \item 1729
+  \item 0
+  \item -273
+\end{itemize}
+\bigskip
+
+Anti-examples:
+\smallskip
+\begin{itemize}
+  \item $\frac{2}{3}$
+  \item $\pi$
+  \item $4.81$
+  \item $\sqrt{2}$
+\end{itemize}
+\bigskip
+
+Notation:
+\smallskip
+\begin{itemize}
+  \item $\mathbb{Z}$ denotes the set of all integers.
+  \item $\mathbb{N}_0$ denotes the set of all non-negative integers.
+  \item $\mathbb{N}_1$ denotes the set of all positive integers.
+  \item $\mathbb{N}$ is ambiguous and may refer to either $\mathbb{N}_0$ or $\mathbb{N}_1$.
+  \item A single integer is often denoted by one of letters $n$, $m$ or $k$, but any symbol can of course be used.
+\end{itemize}
+\bigskip
+
+Representations:
+\smallskip
+\begin{itemize}
+  \item Decimal form
+  \item Binary form
+  \item Hexadecimal form
+  \item Base $n$ form (for $n$ any integer greater than 1)
+  \item Roman form
+  \item Factored form (i.e. as a product of integers)
+  \item Completely factored form (i.e. as a product of primes)
+  \item Standard form
+  \item In written English form
+  \item In written Norwegian form
+  \item As a partition (i.e. as a sum of positive integers)
+\end{itemize}
+\bigskip
+
+Properties:
+\smallskip
+\begin{itemize}
+  \item Positive
+  \item Negative
+  \item Non-negative
+  \item Non-positive
+  \item Prime
+  \item Composite
+  \item Square
+  \item Cube
+  \item $n$-th power (for $n$ a positive integer)
+  \item Triangle number
+  \item Fibonacci number
+\end{itemize}
+\bigskip
+
+Relations:
+\smallskip
+\begin{itemize}
+  \item Equality ($a=b$)
+  \item Smaller than ($a<b$)
+  \item Smaller than or equal ($a \leq b$)
+  \item Greater than ($a>b$)
+  \item Greater than or equal ($a \geq b$)
+  \item Divides ($a \vert b$)
+\end{itemize}
+\bigskip
+
+Operations:
+\smallskip
+\begin{itemize}
+  \item Addition ($a+b$)
+  \item Subtraction ($a-b$)
+  \item Multiplication ($a \cdot b$)
+  \item Quotient of integer division ($a \backslash b$)
+  \item Remainder of integer division ($a \% b$)
+  \item Greatest common divisor (GCD) (Norsk: SFD)
+  \item Smallest common multiple (LCM) (Norsk: MFM)
+\end{itemize}
+\bigskip
+
+Functions:
+\smallskip
+\begin{itemize}
+  \item Squaring
+  \item Generalizing the previous example, any polynomial with integer coefficients gives a function from $\mathbb{Z}$ to $\mathbb{Z}$.
+  \item Generalizing further, any so-called integer-valued polynomial gives a function from $\mathbb{Z}$ to $\mathbb{Z}$.
+  \item ...
+\end{itemize}
+\bigskip
+
+Comments:
+\smallskip
+\begin{itemize}
+\item Every integer is either negative, or 0, or positive.
+\item Every positive integer is either prime, or composite, or 1.
+\end{itemize}
+\bigskip
+
+Philosophical comments:
+\smallskip
+\begin{itemize}
+\item Can we define more precisely what an integer is? Well, one could accept them as undefined ur-concepts, one could use Peano's axioms, or cardinal numbers, or iterated set constructions starting with the empty set. BUT I would not recommend worrying about these issues too much.
+\end{itemize}
+\bigskip
+
+Abstract comments:
+\smallskip
+\begin{itemize}
+\item The integers form a ring. Roughly speaking, this is a set in which we can add, subtract and multiply.
+\item The non-negative integers form a poset (or more precisely a lattice), under the relation of divisibility.
+\end{itemize}
+\bigskip
+
+Discussion problems:
+\smallskip
+\begin{enumerate}
+\item Among the representations in the list, there are three that only work for positive integers. Which ones?
+\item In how many different ways can you write the number 10 in factored form? What about the number 12?
+\item In how many ways can you write the number 4 as a partition? What about the number 5?
+\end{enumerate}
+(The point of question 2 and 3 is to understand the notions of ordered and unordered solutions, and to see a few interesting number-theoretic functions.)
+\bigskip
+
+
+
+\newpage
+\section{Stuff to add}
+
+Todo list:
+
+Types:
+- Rational number
+- Real number
+- Complex number (later)
+- Modular number (later)
+
+Point on the number line.
+Point in R2.
+Point in Point in R3 (later)
+
+Vector in R1
+Vector in R2
+Vector in R3
+
+Line in R2
+
+Type: Angle (undirected angle, directed angle)
+Triangle
+Line segment
+Ray
+Circle?
+
+Concepts: Function, relation, set, etc (see R1 type theory overview)
+
+Algebra: Equations, inequalities
+
+Functions:
+
+
+\newpage
+\section{Template}
+
+
+
+% \scshape inside a set of {  }  makes the text appear in all caps.
+% \large adjusts the size of the font
+% \hfill spaces these things out evenly across the page.
+
+% You can use other commands: \bf, \it, \underline for text as well.
+% There is a similar \vspace command that will space things out vertically on the page.
+
+\smallskip
+
+\hrule
+
+% \smallskip, \medskip, and \bigskip are another way to space things out vertically.  You can also use \vspace{1in} and change in the input according to how much space you want to add (or take away if you use a negative number.)
+
+\bigskip
+
+% Notice how the section is labeled and I've written in complete sentences.
+{\bf The Shape:}  For my shape I chose
+\end{document}

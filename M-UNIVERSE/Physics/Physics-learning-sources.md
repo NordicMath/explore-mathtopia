@@ -28,6 +28,8 @@ http://front.math.ucdavis.edu/1803.07098
 John Baez (This week's finds and much more)
 http://math.ucr.edu/home/baez/TWF.html
 
+http://front.math.ucdavis.edu/1705.05734
+
 Lectures on QFT (Borcherds and Barnard)
 https://arxiv.org/abs/math-ph/0204014
 

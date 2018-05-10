@@ -15,7 +15,23 @@ D: Solid
 E: Not great, but may contain some diamonds
 F: Trash
 
-## "Independent" journals
+## Various links
+
+https://zbmath.org/journals/?s=0&q=*
+
+
+https://homotopical.wordpress.com/links/journals/
+
+https://eudml.org/
+
+
+## "Independent" journals (some very new)
+
+https://journals.mq.edu.au/index.php/higher_structures
+
+Compositionality
+
+
 
 ## JSTOR journals
 
@@ -23,6 +39,8 @@ F: Trash
 ## AMS journals
 
 ## EMS journals
+
+https://www.ems-ph.org/journals/journals.php
 
 ## LMS journals
 [All LMS journals](https://www.lms.ac.uk/publications/journals)

@@ -2,9 +2,13 @@
 
 ## Some classical types
 
-This is not an encyclopedic list, but a good selection of the most important classical algebraic structures. Each of these should be studied in some detail (see later files appearing under the Zophie paradigm).
+This is not an encyclopedic list, but a good selection of the most important classical algebraic structures. Each of these should be studied in some detail for general education (see later files appearing under the Zophie paradigm).
 
+
+
+- Semigroup
 - Monoids
+- Commutative monoids
 - Finite groups
 - Groups
 
@@ -15,7 +19,7 @@ This is not an encyclopedic list, but a good selection of the most important cla
 - Associative algebras
 - Lie algebras
 - Hopf algebras  
-- Graded algebras
+- Graded algebras (includes graded rings)
 - Differential algebras
 - Clifford algebras
 
@@ -28,6 +32,18 @@ This is not an encyclopedic list, but a good selection of the most important cla
 - Boolean algebras  
 
 - Quantum groups
+
+- Poisson algebras
+- Gerstenhaber algebras
+- BV algebras
+
+## Some modern topics in algebra
+
+Hecke algebras
+
+See topics in Feynman categories lectures.
+
+
 
 ## Modules
 

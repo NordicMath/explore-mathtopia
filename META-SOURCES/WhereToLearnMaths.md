@@ -26,6 +26,15 @@ Springer Collected Works, some AMS volumes, Quillen, Arthur, Serre online, ...
 http://www.math.columbia.edu/~woit/wordpress/
 
 
+## Targeted and systematic arxiv searches
+
+https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=cohomology+OR+K-theory+OR+zeta+OR+L-function+OR+Feynman+OR+homotop*+OR+automorphic+OR+motivic+OR+Langlands&terms-0-field=abstract&classification-mathematics=y&classification-physics_archives=all&date-filter_by=specific_year&date-year=2016&date-from_date=&date-to_date=&size=100&order=
+
+Add Langlands and motivic here above.
+
+
+http://front.math.ucdavis.edu/search/?s=Listings&n=100&c=math%2A&o=100&t=primer+OR+lecture+OR+survey+OR+primer+OR+lecture+OR+introduction+OR+course
+
 
 
 ## Journals
@@ -179,6 +188,11 @@ https://www.springer.com/series/5394?detailsPage=titles
 https://www.springer.com/gp/computer-science/all-series-computer-science
 
 
+### Birkhauser
+
+All series here:
+https://www.springer.com/birkhauser/mathematics?SGWID=0-40292-12-147444-0
+
 
 ### From OUP
 
@@ -217,7 +231,6 @@ https://bookstore.ams.org/PCMS
 
 - SMF/AMS Texts and Monographs
 https://bookstore.ams.org/SMFAMS
-
 
 
 
@@ -264,8 +277,6 @@ http://www.cambridge.org/gb/academic/subjects/mathematics/series/new-mathematica
 
 - MSRI Publications
 http://www.cambridge.org/gb/academic/subjects/mathematics/real-and-complex-analysis/series/mathematical-sciences-research-institute-publications#33kHSWMGJeDDkT3L.97
-
-
 
 
 ### From International Press
