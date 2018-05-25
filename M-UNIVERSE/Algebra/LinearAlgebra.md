@@ -6,6 +6,11 @@
 
 A top reference is the GTM volume by Roman (3rd edition).
 
+Other good references:
+- Axler
+- Lax
+
+
 A list of references:
 https://begriffs.com/posts/2016-07-24-best-linear-algebra-books.html
 

@@ -61,6 +61,8 @@ QFT for the gifted amateur.
 
 Schottenloher: A mathematical introduction to conformal field theory
 
+Woit: Quantum Theory, Groups and Representations
+
 ### People
 
 Mathematicians who have som interest in physics include:
