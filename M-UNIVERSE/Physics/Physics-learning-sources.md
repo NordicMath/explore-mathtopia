@@ -63,6 +63,8 @@ Schottenloher: A mathematical introduction to conformal field theory
 
 Woit: Quantum Theory, Groups and Representations
 
+Peskin and
+
 ### People
 
 Mathematicians who have som interest in physics include:
