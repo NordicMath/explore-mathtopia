@@ -19,10 +19,11 @@ F: Trash
 
 https://zbmath.org/journals/?s=0&q=*
 
-
 https://homotopical.wordpress.com/links/journals/
 
 https://eudml.org/
+
+http://www.clas.wayne.edu/disaksen/Algebraic-topology-journals
 
 
 ## "Independent" journals (some very new)

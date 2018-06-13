@@ -1,0 +1,101 @@
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+}
+
+
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[makeroom]{cancel}
+
+\usepackage{mathtools}
+%\usepackage{pst-node}
+%\usepackage{auto-pst-pdf}
+
+%\usepackage{tikz-cd}
+
+
+\newcommand{\ad}[1]{\text{Ad}^{#1}}
+\newcommand{\hatad}[1]{\widehat{\text{Ad}}^{#1}}
+
+\newcommand{\lam}[1]{\text{Lam}^{#1}_\bigcirc}
+\newcommand{\lamp}[2]{\text{Lam}^{#1}_\bigcirc\left(#2\right)}
+\newcommand{\adam}[1]{\text{Ad}^{#1}_{\bigcirc}}
+\newcommand{\adamp}[2]{\text{Ad}^{#1}_\bigcirc\left(#2\right)}
+\newcommand{\hatadam}[1]{\widehat{\text{Ad}}^{#1}_{\bigcirc}}
+\newcommand{\hatadamp}[2]{\widehat{\text{Ad}}^{#1}_{\bigcirc}\left(#2\right)}
+
+
+\newcommand{\boxlam}[1]{\text{Lam}^{#1}_\square}
+\newcommand{\boxlamp}[2]{\text{Lam}^{#1}_\square\left(#2\right)}
+\newcommand{\boxadam}[1]{\text{Ad}^{#1}_{\square}}
+\newcommand{\boxadamp}[2]{\text{Ad}^{#1}_{\square}\left(#2\right)}
+\newcommand{\hatboxadam}[1]{\widehat{\text{Ad}}^{#1}_{\square}}
+\newcommand{\hatboxadamp}[2]{\widehat{\text{Ad}}^{#1}_{\square}\left(#2\right)}
+
+
+\title[Tannakian symbols]{Motives, multiplicative functions, and automated reasoning}
+\author{Andreas Holmstrom (Stockholm University)  \\ Torstein Vik (Fagerlia Upper Secondary School, {\AA}lesund} )
+\institute{(with contributions by Ane Espeseth, \\ Magnus Hellebust Haaland, Olav Hellebust Haaland)}
+\date{N-cube conference, Stockholm, June 2018}
+
+
+\begin{document}
+
+\begin{frame} \frametitle{\insertsection}
+  \titlepage
+
+\end{frame}
+
+%\section{Crash course on lambda-rings}
+
+\section{Intro}
+
+\begin{frame} \frametitle{\insertsection}
+
+We have many new results in number theory - here we hope to give a flavour of the most important ideas.
+\vskip20pt
+Outline:
+\begin{enumerate}
+\item Lambda-rings
+\item Tannakian symbols
+\item Multiplicative functions
+\item Motives
+\item Miracles
+\end{enumerate}
+
+\end{frame}
+
+
+\section{Crash course on lambda-rings}
+
+\begin{frame} \frametitle{\insertsection}
+
+\uncover<1->{Let $R$ be a torsion-free (unital) commutative ring. }
+
+\uncover<2->{A lambda-structure on $R$ is an infinite sequence of ring homomorphisms $\psi^1$, $\psi^2$, \ldots \ from $R$ to $R$ satisfying the following axioms:}
+\vskip10pt
+\begin{enumerate}
+\uncover<3->{\item $\psi^1(x) = x$ for all $x \in R$.}
+\uncover<4->{\item $\psi^m (\psi^n(x)) = \psi^{mn}(x)$ for all $m, n$ and all $x \in R$. }
+\uncover<5->{\item $\psi^p(x) \equiv x^p \pmod {pR}$ for all prime numbers $p$ and all $x \in R$.}
+\end{enumerate}
+\vskip10pt
+\uncover<6->{The operations $\psi^1$, $\psi^2$, \ldots are called \textbf{Adams operations}, and we will denote them by $\ad{1}$, $\ad{2}$, etc. }
+
+\end{frame}
+
+
+
+\end{document}
