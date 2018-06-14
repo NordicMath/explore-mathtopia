@@ -1,4 +1,4 @@
-# Notation and Creativity
+# Notation, Language and Creativity
 
 Review the central role of language and notation, and its limitations on creativity.
 
