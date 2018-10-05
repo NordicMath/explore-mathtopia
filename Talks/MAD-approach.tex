@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{
+\normalfont \normalsize
+\textsc{Working draft} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge The case for cognition-based models of mathematics, and the MAD prototype approach \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Andreas Holmstrom and Torstein Vik} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+
+\begin{abstract}
+Using examples from didactics, AI mathematics and number theory, we argue that a \emph{cognition-based} approach to mathematics might for many purposes be better than the more traditional \emph{foundation-based} approaches. We also present the MAD framework as a first rough model for what such cognition-based approaches may look like.
+\end{abstract}
+
+\section{Introduction}
+
+Mmmhm.
+
+\paragraph{Example}
+Definition: For $a, b \in \mathbb{R}$, set $a \otimes b = a^{log(b)}$.
+
+
+\section{Pasted from other files}
+
+\subsection{Background: AI for mathematics?}
+
+So the main goal is to understand zeta functions. However, there is another project we're also involved in, running in the background here. This other project tries to bridge the gap between what human mathematicians can do and what computers can do. Computers currently are good at fast computation (in standard number systems) and at non-creative algebraic reasoning (e.g. symbolic algebra or symbolic logic). What humans have however, is (1) )our visual/spatial/temporal intuition, (2) our emotional/aesthetic intuition, and (3) our ability to perform creative leaps (e.g. by using analogies). Although the ultimate goal is to make a computer mimick all of these abilities, we focus to begin with on trying to formalize/automatize the art of reasoning by analogy.
+
+Todo: Add quote of Scholze for reference.
+
+
+\subsection{Example (an example of AI reasoning)}
+Definition: For $a, b \in \mathbb{R}$, we set $a \otimes b := a^{log(b)}$. (We will see in a moment what this is good for!)
+
+Starting point: Let us compare real numbers (A) and Dirichlet series (B), i.e. formal series of the form $\sum_1^{\infty
+} a_n/n^s$.
+
+Let us try to imagine how a computer could do some intelligent reasoning starting only from the knowledge that these two concepts exist.
+
+Questions: Can X's be added? Can they be multiplied? Is multiplication distributive over addition? (Aha: Analogy). Is there another binary operation that is distributive over multiplication? Yes in both cases. This new operations, for what inputs is it defined? A: For positive inputs. B: For inputs admitting an Euler product.
+
+Conclusion: The property of being positive is analogous to admitting an Euler product.
+
+What we did here was to ask structure questions (Dialectics), focussing on "Machines" (in this case binary operations), and using the language of Analogy. Hence the MAD approach.
+
+Challenge: Extend this kind of automation to truly interesting problems.
+
+Important point: When we study Dirichlet series, all of the above operations are important! This already indicates that we are dealing with a complicated structure.
+
+
+
+\end{document}

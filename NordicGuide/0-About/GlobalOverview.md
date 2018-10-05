@@ -29,8 +29,6 @@ Outline:
 
 ## Level 2: Secondary school (ages 15-18)
 
-Goals:
-
 Overall goal: Be able to nail the STEP exams used for Cambridge/Oxford admission. (Not because the exams are important in themselves, but because the problems really check whether you have a deeper understanding or not.)
 
 1. Standard number systems:
@@ -123,19 +121,19 @@ Include some de Rham cohomology.
 
 Algebra 1: Linear algebra
 
-
 Algebra 2: Group theory, including representation theory, natural examples of lambda-rings and Hopf algebras, group cohomology, Galois groups, automorphism groups in categories, and maybe connections to geometry (like the classifying space and mapping class groups).
 
-Algebra 3: Scheme theory  
+Algebraic geometry 1: Scheme theory  
 
 Foundations 1: Overview of foundational problems
 Logic, set theory, type theory, theory of computation, with a selection of interesting topics.
 
-
 Foundations 2: Category theory
 Starting from scratch, covering a little homological and homotopical algebra, and ending with the introduction of Feynman categories, topos theory, and infinity-categories.
 
-Combinatorics. Think more about this one.
+Combinatorics 1. Think more about this one.
+- Sequences?
+- Graphs?
 
 Analysis 1: Functions and function spaces
 - Different notions of functions
@@ -150,9 +148,9 @@ Number theory 1: Zeta functions
 
 Number theory 2: Rational points
 
-Metamathematics?
+Metamathematics 1?
 
-Applied mathematics (think more about this one). Possible topics include
+Applied mathematics 1, 2, 3??? (think more about this one). Possible topics include
 - Numerical methods for all the standard problems
 - Statistics
 - Machine learning.
@@ -160,4 +158,22 @@ Applied mathematics (think more about this one). Possible topics include
 - Computational mathematics, algorithms
 - Quantum computing? Naah.
 
-Physics (think more about this one too).
+Physics 1, 2, ... (think more about this one too).
+
+## Level 6: Graduate
+
+Overall goal: Become an expert in one or a few areas.
+
+The Guide will aim to cover a number of areas in considerable detail, supported by the Zophie paradigm, the Dialectical approach, and the Legend of Kan.
+
+List of planned modules:
+
+- Catalogue of algebraic structures
+- Frameworks for algebra (Cover Feynman categories and related notions, including model structures on operads etc etc.)
+- Catalogue of geometric structures
+- Frameworks for geometry
+- Catalogue of cohomology theories
+- Frameworks for cohomology
+- Category theory
+- L-functions and their underlying objects
+- Perfectoid things

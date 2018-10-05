@@ -1,0 +1,407 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+%\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\newcommand{\defhl}[1]{\emph{#1}}
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{
+\normalfont \normalsize
+\textsc{Work in progress; do not distribute!} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\LARGE Towards global analogues of the Weil conjectures? \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Magnus and Olav Hellebust Haaland; Andreas Holmstrom; Torstein Vik} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+In arithmetic geometry, we distinguish between local zeta functions (attached to schemes in positive characteristic) and global zeta functions (attached to schemes in characteristic zero). Local zeta functions have a highly constrained structure, governed by the four Weil conjectures (rationality, functional equation, Riemann hypothesis and connection to Betti numbers). There is a well-known analogy between local and global zeta functions, and the analogues of the functional equation and the Riemann hypothesis are expected to hold also in the global case.
+
+In these notes we describe some numerical evidence that may be pointing to a new and different kind of analogy between local and global zeta functions. We formulate four guiding but totally imprecise conjectures (Conjecture X, Conjecture Y, Conjecture Z and Conjecture N) that may perhaps be viewed as global analogues of the Weil conjectures together with the surrounding theory of schemes and cohomology, which has been so successful in the local setting.
+\end{abstract}
+
+\section{Introduction}
+
+Consider a scheme $X$ (of finite type over $\mathbb{Z}$). There are four ways of thinking about (or \emph{representing}) schemes, namely:
+\begin{enumerate}
+\item The "naive" viewpoint: A scheme is a finite list of variables together with a finite list of polynomial equations (with integer coefficents, say) in these variables. One can elaborate this viewpoint slightly in order to allow for both affine and projective schemes.
+\item The "commutative algebra" viewpoint: A scheme is a commutative ring, or a collection of commutative rings "glued together".
+\item The "functor of points" viewpoint: A scheme is a functor from the category of commutative rings to the category of sets.
+\item The "locally ringed space" viewpoint: A scheme is a topological space equipped with a sheaf of commutative rings such that all the stalks are local rings.
+\end{enumerate}
+
+Given a scheme $X$, we can associate to it a number of interesting formal series:
+\begin{itemize}
+
+\item For each prime $p$, there is a local zeta function $Z_p(X, t)$ attached to $X$ (also denoted $Z(X, t)$ if the choice of prime is understood from the context). It is a power series in the variable $t$, encoding the number of solutions (or "points") of $X$ in all finite fields of characteristic $p$. The first part of the Weil conjectures says that this power series is a rational function, a statement that implies a highly surprising relation between point counts in different finite fields of the same characteristic.
+
+\item There is also a global zeta function $\zeta(X, s)$. This is a Dirichlet series, i.e. a series of the form
+$$ a_1 + \frac{a_2}{2^s} + \frac{a_3}{3^s} + \ldots = \sum_{n=1}^{\infty} \frac{a_n}{n^s}   $$
+defined by the Euler product
+$$  \prod_p Z_p(X, p^{-s})  $$
+and hence encoding the number of solutions to $X$ in ALL finite fields. (Check sign conventions here.)
+
+\item Furthermore, for any integer $j$, there is an L-function $L(X, j, s)$ which is also a Dirichlet series. We prefer the notation $L(X, j, s)$ over the more common $L(h^j(X), s)$ because it is perfectly possible to talk about the L-function without first defining or even talking about the "motive" $h^j(X)$.
+
+\end{itemize}
+
+\paragraph{The $m$-function}
+For any Dirichlet series
+$$\sum_{n=1}^{\infty} \frac{a_n}{n^s}$$
+we define the \emph{associated m-function} to be
+$$ m(t) = a_1 + a_2 t + a_3 t^2 + \ldots =  \sum_{n=1}^{\infty} a_n t^{n-1} $$
+and we also introduce the shorthand notation
+$$ M(t) = a_1 + a_2 \frac{t}{2} + a_3 \frac{t^2}{3} + \ldots   $$
+obtained by taking the antiderivative of $m(t)$ (with zero constant term) and then dividing by $t$. (Remark: On the level of motives, this operation would correspond to applying the inverse Tate twist.)
+%\end{definition}
+
+If the Dirichlet series is of the form $\zeta(X, s)$ or $L(X, j, s)$, then there are bounds on the coefficients $a_n$ which imply that the series $m(t)$ has convergence radius 1. We may therefore take an L-function or a global zeta function and study its associated $m$-function as a function on the unit disc (and also beyond the unit disc, \emph{if} we can find a way of extending $m(t)$ meromorphically).
+
+\paragraph{Key idea}
+The new local-global analogies that we propose arise from the idea that the $m$-function $m(t)$ should be viewed as the direct global analogue of the local zeta function $Z(X, t)$. This leads naturally to three main "conjectures", and we summarize the main ideas straight away under the headings "Conjecture X", "Conjecture Y" and "Conjecture Z". However, these conjectures become convincing only in the light of the numerical evidence presented further down. We also mention an auxiliary "Conjecture N" regarding the conductor of an L-function.
+
+Finally, we emphasize that even though there might be a Conjecture X along the lines we propose, it may happen that Conjecture Y and Z are completely nonsensical, and that the patterns described by Conjecture X will be explained by some other ideas or theories that we have not been able to recognize.
+
+\paragraph{Conjecture X}
+
+The Weil conjectures tell us that any local zeta function $Z(X, t)$ is a rational function (and hence completely determined by its zeroes and poles), and they furthermore give strong constraints on the location of these zeroes and poles.
+
+In Conjecture X, we propose that at least in certain cases, we can say things about the zeroes of $m(t)$ and $M(t)$ in statements that are reminiscent of the Weil conjectures, including the Riemann hypothesis for a local zeta function.
+
+As an example, for the L-function associated to a given elliptic curve of algebraic rank 2, Conjecture X implies the BSD conjecture. An interesting note here is that Conjecture X would make sense even if we did not know modularity for elliptic curves, while the standard formulation of BSD relies on modularity, since we need to speak about the L-function at a point outside of the domain of convergence of the Euler product.
+
+\paragraph{Conjecture Y}
+
+For a local zeta function, there are three distinct combinatorial interpretations of the coefficents appearing in the zeta function itself and two of its transforms. These interpretations come from:
+
+\begin{enumerate}
+\item Counting ideals of a given index (this is the natural counting problem associated to the "commutative algebra" point of view on schemes).
+\item Counting solutions (or "points") of the scheme in a field extension of $\mathbb{F}$ of a given degree (a counting problem associated to the "naive" or to the "functor of points" perspectives).
+\item Counting closed points of a given degree (a counting problem associated with the "locally ringed space" point of view).
+\end{enumerate}
+
+For global zeta functions (or L-functions) on the other hand, only the first counting problem makes sense. The second and third correspond to geometric-combinatorial theories that only exist in the local setting. Our Conjecture Y proposes that there is a geometric-combinatorial theory of objects we may call "dark schemes" that gives a counting interpretations in the global case that are directly analogous to (2) and (3) above.
+
+\paragraph{Conjecture Z}
+
+In the case of a local zeta function $Z_p(X, t)$, we may choose to look for zeroes and poles in real numbers, in complex numbers or in the $p$-adic numbers (where $p$ is some prime not necessarily equal to the $p$ that defined the local zeta function).
+
+There is a correspondence between these three types of zeroes/poles and three kinds of cohomology, which goes as follows.
+
+\begin{enumerate}
+\item Zeroes/poles in $\mathbb{R}$ give information about the algebraic part of cohomology, i.e. the subspace of a cohomology group that is spanned by images of algebraic cycles.
+\item Zeroes/poles in $\mathbb{C}$ give information about Betti numbers, i.e. about the entire cohomology groups.
+\item Zeroes/poles in $\mathbb{Q}_p$ (and in finite extensions of $\mathbb{Q}_p$) give information about Hodge numbers, i.e. cohomology groups equipped with the extra datum of a Hodge structure. Information from a single prime gives a bound on the Hodge numbers, while information from many primes taken together determines their precise values.
+\end{enumerate}
+
+Conjecture Z (for which we have no evidence at all) says that there are cohomology theories for dark schemes that explain the numerical patterns observed in relation to Conjecture X.
+
+
+\paragraph{Conjecture N}
+
+Every L-function $L(X, j, s)$ is conjectured to satisfy a so-called \emph{global functional equation} (GFE). Briefly, the GFE for a given L-function says that there exists a positive integer $N$ (depending on the choice of L-function!) such that a certain functional equation (involving $N$ together with a list of Gamma-factors) holds for the L-function. We refer to Farmer et. al. (give ref) for details.
+
+The number $N$ here is called the \emph{conductor} of the L-function, and in order to compute it, one usually computes its $p$-adic valuation for all primes $p$, via a study of ramification in the underlying Galois representations. Our Conjecture $N$ (or more precisely: our vague hope!) says that there exists some practical recipe for computing the $N$ by finding its archimedean absolute value directly, without taking the tedious and technically taxing route through all the non-archimedean ones.
+
+
+\section{Preliminaries}
+
+\subsection{Necessary background}
+
+\begin{itemize}
+\item Definition of Newton transform, Leibniz transform, and Euler transform (may compare to log, exp, sqrt)
+
+\end{itemize}
+
+\subsection{Background that would be nice to add}
+
+(Especially if giving an accessible talk\ldots)
+\paragraph{L-functions}
+
+\begin{itemize}
+\item Give precise definitions of local zeta functions, the global zeta function, and the L-functions $L(X, j, s)$. Relate this to the category of finite fields and the notion of a "mini-scheme" (i.e. a functor from finite fields to finite sets). Give numerical examples of a local zeta function and its transforms.
+\item Explain the Weil conjectures as done in the SU talk, using the category of finite fields, point counting, Newton and Leibniz, and the plots of zeroes and poles (maybe over the reals, the complex numbers, and $p$-adically).
+\item Discuss the computational problem of point counting.
+\item Discuss different ways of organising the point counts at a single prime, at all prime powers, and also in the entire PEN cube, with generating series in different directions and mysterious orthogonality etc.
+\item Say general waffle about why zeta functions and L-functions are important, and what the main big conjectures are.
+\item Discuss the failures of current attempts towards $\mathbb{F}_1$-geometry, in particular that all existing theories seem to relate to L-functions of $GL_1$ type only.
+\item Explain more carefully the classical analogue between local and global zeta functions, and the strange fact that we have to work with the subsitution $t \mapsto p^{-s}$, which gives the local zeta function infinitely many zeroes, even though it morally only has a finite number.
+\item Explain the GFE and the conductor in more detail.
+\item Discuss the class of L-functions, with axioms, no loss of generality if restricting to affine schemes, and the relation to the Grothendieck ring of motives.
+\end{itemize}
+
+References here are Serre: Lectures on $N_X(p)$ and Mustata: Zeta functions in algebraic geometry (pp. 7).
+
+\paragraph{Sequences and "countable" objects}
+
+\begin{itemize}
+\item Discuss different types of "countable" objects (real/complex numbers, integer sequences, power series, Dirichlet series) and ways of representing such objects (explicit formula, recursion formulas of different types, explicit form for a generating series, a counting problem, via some transform).
+\item Different classes of sequences (elaboration): Periodic, rational, super-rational, holonomic, non-holonomic, multiplicative. Can use time analogy from Geneva.
+\item Discuss the notion of Kolmogorov complexity of a "countable" object, with examples connecting to linear recursion, holonomic recursion, possibly triangular recursion, and the use of transforms.
+\item Discuss the general "recognition problem", i.e. given an integer sequences, or the first 25 digits of a real number in decimal expansion, how can we recognize the object and express it in exact form?
+\end{itemize}
+
+\paragraph{Multiplicative functions and operations on motives}
+
+\begin{itemize}
+\item Elaborate on e-motives? On exponential motives?
+\end{itemize}
+
+\paragraph{Automated reasoning}
+
+\begin{itemize}
+\item Motivating example: Binary operations on Dirichlet series (three important ones), Euler product and positivity.
+\item Arriving at the $t$-analogy and our conjectures via nomic representations and knowledge of the local setting.
+\end{itemize}
+
+\section{Unsorted list of examples}
+
+Affine/projective spaces.
+
+
+
+\section{Conjecture X: Numerical patterns}
+
+ADD HERE THE MARVELLOUS EXAMPLES OF MAGNUS AND OLAV!
+
+\subsection{The L-function of the elliptic curve 75a (??)}
+
+Some real zeroes here? And the weird symmetry with factor 4?
+
+NOTE! I think the rank is 0 in this example. Should we apply a Tate twist to this $m$-functions and look for zeroes again?
+
+\subsection{289a1}
+
+Here $m(t)$ has zeroes at $E(289)$ and $-E(4 \cdot 289)$. The rank is 1!
+
+\subsection{389a1}
+
+This has rank 2.
+
+Here $M(t)$ has two real zeroes for $E(389)$ and $-E(4 \cdot 389)$.
+
+Also, $m(t)$ has zeroes at $-0.6042576046984\ldots$ and at $0.385172566491\ldots$
+
+There are two more real zeroes it seems. Add the real plot and check if there are relations between the zeroes, possibly the same relation (whatever it is!) as between the E-numbers in previous examples.
+
+\section{Conjecture Y: Geometric/combinatorial framework?}
+
+Todo: Add various eta quotient examples here! Can we find a single example with two terms rather than one?
+
+Take an eta example and contrast the existence and non-existence of a known counting problem.
+
+Discuss the growth rate of dark point count sequences and the nature of possible counting problems.
+
+Discuss triangle recursion?
+
+Locally ringed spaces with non-finite residue fields but finite field extensions?
+
+Other notions of "spaces" with "points" of "degree" $n$.
+
+Discuss etale coverings?
+
+\section{Conjecture Z: Cohomological explanation?}
+
+
+\section{Comments on conjecture N}
+
+Collect them here, and consider whether they should be sprinkled throughout the previous sections instead.
+
+Say that G-L baggage explains all components of the GFE except the conductor. Wushi: Relation to $p$-adic Hodge theory? In any case, the conductor (in the world of schemes and motives) comes from considerations over the base $\mathbb{Z}$ rather than the base $\mathbb{Q}$.
+
+List approaches to the conductor: Booker's thesis, Kato, Galois rep ramification (with examples from hyperelliptic curves?). More?
+
+Discuss the analytic conductor, maybe with ref to Booker's F(0) or something like that.
+
+Intuition: The conductor is the Kolmogorov complexity of an L-function.
+
+\section{Final comments}
+
+Things to include:
+\begin{itemize}
+\item Note that our conjectures are logically independent of all the Grothendieck-Langlands baggage (schemes, motives, automorphic representations).
+\item Discuss higher-genus curves and HGMs as a litmus test for whether all of this is nonsense or not.
+\item The CM example explained by Cohen? Is it relevant? Can the $j$-functions be reconstructed completely in this way, and can we think of our conjectures as a framework for incorporating CM theory, with reconstruction of cool functions from some cool real numbers?
+\item More on the decomposition problem, sums of eta quotients, class group decomposition, and potential use of other operations?
+\item More on the historical development, see excerpt from the SU talk notes below.
+\end{itemize}
+
+\subsection*{From the SU talk notes}
+
+
+The patterns in the local picture led (Weil, Grothendieck, etc.) to:
+
+\begin{enumerate}
+\item A new geometry (schemes) tied to a counting interpretation for the left side.
+\item A decomposition theory (additive on the left and middle, multiplicative on the right) called the theory of motives.
+\item Cohomology theories giving conceptual meaning to the zeroes and poles on the right, both real, complex and p-adic.
+\end{enumerate}
+
+Key point: Schemes, motives, cohomologies emerged as a response to the patterns in the local picture, and there is no binding reason to believe that they should be relevant for the global setting.
+
+Plan for global examples: Forget schemes, motives, cohomologies, and just look at the patterns.
+
+Note: Of the ingredients in the global functional equation, everything is explained by the Grothendieck language EXCEPT the conductor.
+
+Hence the only guiding principle we have is that the patterns we look for should be related to the conductor (or the square root of the conductor) somehow.
+
+Will consider four examples.
+
+\subsection{Example 1: E36}
+
+
+\subsection{Example 2: Number field of Serre}
+
+
+\subsection{Example 3: Dirichlet characters}
+
+
+\subsection{Example 4: E389}
+
+\subsection{Even older talk notes}
+
+The point I want to make is that in the study of local zeta functions, the numerics came first, and then the theory of schemes and motives came later as a method for proving the numerical patterns. Let us now study the numerical patterns as they are also in the global case, and only afterwards look for explanations.
+
+Maybe the first step is to study the local numerics, then the machinery explaining it (combinatorial/geometric/cohomological), then the global numerics, then the machinery to explain that? This could give a handy 2x2 or 2x3 table that we work through during the talk. OR maybe better, it would give two columns, one for the local and one for the global, BUT in that case we might need to switch examples to capture both an eta product and a rank two case.
+
+First temporary conclusion (START HERE NEXT TIME): Define first the local and the global zeta function. Then ask structured question to both zeta functions, revealing the Weil conjectures and the underlying machinery, and also the weird examples of global patterns. Formulate Conjecture X and Y in this process.
+
+
+
+
+\appendix
+
+\newpage
+\section{Notes from BSD discussion fall 2017}
+
+\subsection{Ideas}
+
+Idea: Quantization of some kind, for expressions of Waldspurger type coming from eta products. So that near 0 implies equal to zero.
+
+Idea: Interpretation as partition function (in the sense of physics):
+\url{https://en.wikipedia.org/wiki/Partition_function_(mathematics)}
+Can we view the central value as coming from something of trace class?
+
+Idea: Transform the triple Hadamard product $\sum a_n * (1/n) * r^n$ to a Cauchy convolution, via something resembling the Bell derivative and antiderivative?
+
+Idea: Bound the partial sums, for example by induction? Could try for a very weak bound approaching zero.
+
+Todo: Check the expressions in the introduction of Bruinier and Ono.
+
+
+\subsection{References}
+
+References:
+
+\begin{itemize}
+\item \url{https://arxiv.org/pdf/math/0612667.pdf}
+\item \url{http://web.stanford.edu/~tonyfeng/1GrossZagierWaldspurger.pdf}
+\item Dokchitser \url{http://www.emis.de/journals/EM/expmath/volumes/13/13.2/Dokchitser.pdf}
+\item Henri Cohen: Advanced topics book, pp. 511.
+\item Bruinier and Ono: \url{https://www.aimath.org/news/partition/brunier-ono.pdf}
+\end{itemize}
+
+
+\subsection{Expressions for the central value}
+
+Let
+$$L(E, s) = \sum_{n \geq 1} \frac{a_n}{n^s}$$
+be the L-function of an elliptic curve. Around $s=1$, this function has a Taylor expansion
+$$ L(E, s) = c_0 + c_1 (s-1) + c_2 (s-1)^2 + \ldots  $$
+A known formula states that (is this the formula of Waldspurger? See \url{https://arxiv.org/pdf/math/0612667.pdf} )
+$$ \frac{\sqrt{N}}{2 \pi} L(E, 1) = (1 + \varepsilon) \sum \frac{a_n}{n} \exp(-2 \pi n / N)  $$
+To simplify the right hand side slightly, set
+$$ r = \exp(-2 \pi / \sqrt{N})  $$
+and introduce the function
+$$  f(x) = \sum_{n \geq 1} \frac{a_n}{n} x^n  $$
+Note that the derivative
+$$  f'(x) = \sum_{n \geq 1} \frac{a_n}{n} x^n  = a_1 + a_2 x + a_3 x^2 + \ldots  $$
+becomes the ordinary generating function for the sequence $\{ a_n \}$.
+
+Now in order to prove that $c_0 = 0$, it is enough to prove that $f(r) = 0$.
+
+We can easily compute the first few terms in the expression for $f(r)$ in the specific case of (I think) the curve $389a1$. We get
+$$ 0.727188 - 0.528802 - 0.256359 + 0.139816 - 0.122007 + 0.098580 - 0.076807 + 0 + 0.006318 + 0.024810 + \ldots   $$
+and inspecting the terms we see that indeed they seem to cancel out and the sum appears to approach zero, as conjectured in BSD.
+
+\subsection{Ideas for proving vanishing of Taylor coefficients}
+
+
+Find a function that has the exp expression as a zero or a maximum and show that our $a_n$ expression is related to this function.
+
+We should consider the ordinary generating series of the Dirichlet coefficients, the Cauchy inverse of this series, and various derivatives/antiderivatives of both. It would be helpful to plot these also for curves of low rank. Note that showing that the ordinary generating series vanishes at some value $r$ is equivalent to showing that the Cauchy inverse blows up, which seems much easier, and it also seems we could then pass freely between derivatives and antiderivatives in the course of the proofs.
+
+Can we use the box decomposition for quantization? Suppose we can prove that any elliptic curve can be decomposed into a eta things from some finite lists. This might then help. Also, note that $exp(\sqrt{4N})$ is the same as $exp(\sqrt{N})^2$, which might lead precisely to the sort of cancellation required for the Taylor coefficient to be exactly zero.
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
